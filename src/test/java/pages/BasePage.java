@@ -15,6 +15,7 @@ public class BasePage {
         driver = new ChromeDriver();
         String url = "https://demo.automationtesting.in/Index.html";
         driver.get(url);
+        driver.get(url);
 
         LOG.info("Open browser maximize");
         driver.manage().window().maximize();
