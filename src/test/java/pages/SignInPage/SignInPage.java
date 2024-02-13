@@ -41,7 +41,7 @@ public class SignInPage extends BasePage {
     }
     public void clickemailField() {
         LOG.info("input 'Email address' in field" );
-        driver.findElement(emailField).sendKeys();
+        driver.findElement(emailField).sendKeys("abc@gmail.com");
     }
 
 }
