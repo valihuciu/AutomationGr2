@@ -12,7 +12,14 @@ public class SignUpTest extends BaseTest {
 
     @Test
     public void signIn() {
-    }
+        String email = "abc@email.com";
 
+        LOG.info("insert 'SignUp Email' ");
+        signInPage.insertSignUpEmail(email);
+
+        LOG.info ("click 'Register' Button");
+        signInPage.clickEnterRegister();
+
+    }
 
 }
