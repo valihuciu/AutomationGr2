@@ -2,6 +2,7 @@ package pages.RegisterPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +46,7 @@ public class RegisterPage extends BasePage {
     private By insertConfirmPasword = By.id("secondpassword");
     private By pressSubmit = By.id("submitbtn");
     private By pressRefresh = By.xpath("//button[@value='Refresh']");
+    private By chooseFileButton = By.id("imagesrc");
 
 
 
@@ -137,6 +139,12 @@ public class RegisterPage extends BasePage {
     public void insertConfirmPassword(String confirmPassword){
         LOG.info("inserting password");
         driver.findElement(insertConfirmPasword).sendKeys(confirmPassword);
+    }
+
+    public void chooseFile(){
+        LOG.info("upload image");
+        WebElement chooseFile = driver.findElement(chooseFileButton);
+        chooseFile.sendKeys("C://Users/ASUS/Pictures/chooowwww.jpg");
     }
 
     public void pressSubmit(){
